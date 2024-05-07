@@ -3,6 +3,9 @@ import json
 
 JSON_PATH = "summarizedNews.json"
 data = []
+USERNAME = # username for the post request
+PASSWORD = # password for the post request
+
 
 app = Flask(__name__)
 
@@ -29,7 +32,7 @@ def save_to_json():
     return jsonify({"message": "Data saved successfully"})
 
 def is_valid_credentials(username, password):
-    return username == 'praiseprince' and password == 'praise'
+    return username == USERNAME and password == PASSWORD
 
 @app.route('/')
 def index():
